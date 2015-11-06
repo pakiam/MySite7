@@ -1,0 +1,145 @@
+@import "compass/reset"
+@import "compass/css3"
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700')
+@import "variables"
+@import "typography"
+
+
+
+.transition
+  -webkit-transition: all 1s linear
+  -moz-transition: all 1s linear
+  -ms-transition: all 1s linear
+  -o-transition: all 1s linear
+  transition: all 1s linear
+body
+  font-size: 62.5%
+  font-family: $font
+  background-color: #F4F7F0
+  overflow-x: hidden
+.to-children-site
+  position: absolute
+  top: 10px
+  right: 10px
+  z-index: 10
+canvas
+  display: inline-block
+  vertical-align: baseline
+.main
+  height: 100vh
+  z-index: 9
+.top-wrapper
+  display: table
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+.top-description
+  display: table-row
+.top-centered
+  display: table-cell
+  text-align: center
+  padding-top: 15%
+.logo
+  img
+    max-width: 100%
+  a
+    display: inline-block
+    vertical-align: middle
+    width: 170px
+    height: 170px
+    -webkit-animation: pulse 5s infinite linear
+    -o-animation: pulse 5s infinite linear
+    animation: pulse 5s infinite linear
+  h2
+    text-transform: uppercase
+    margin-top: 30px
+    font-weight: bold
+
+@-webkit-keyframes pulse
+  0%
+    -webkit-transform: scale(1)
+  25%
+    -webkit-transform: scale(1.1)
+  50%
+    -webkit-transform: scale(1)
+  75%
+    -webkit-transform: scale(1.1)
+  100%
+    -webkit-transform: scale(1)
+
+@-moz-keyframes pulse
+  0%
+    -moz-transform: scale(1)
+  25%
+    -moz-transform: scale(1.1)
+  50%
+    -moz-transform: scale(1)
+  75%
+    -moz-transform: scale(1.1)
+  100%
+    -moz-transform: scale(1)
+
+@-ms-keyframes pulse
+  0%
+    -ms-transform: scale(1)
+  25%
+    -ms-transform: scale(1.1)
+  50%
+    -ms-transform: scale(1)
+  75%
+    -ms-transform: scale(1.1)
+  100%
+    -ms-transform: scale(1)
+
+@-o-keyframes pulse
+  0%
+    -o-transform: scale(1)
+  25%
+    -o-transform: scale(1.1)
+  50%
+    -o-transform: scale(1)
+  75%
+    -o-transform: scale(1.1)
+  100%
+    -o-transform: scale(1)
+
+@keyframes pulse
+  0%
+    transform: scale(1)
+  25%
+    transform: scale(1.1)
+  50%
+    transform: scale(1)
+  75%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+.items
+  margin-top: 100px
+  text-align: center
+
+.item
+  margin-top: -100px
+  display: none
+  p
+    text-transform: uppercase
+    text-align: left
+    display: inline-block
+    font-weight: bold
+  img
+    width: 150px
+    height: 150px
+    margin-left: 20px
+    max-width: 100%
+    vertical-align: middle
+  @extend .transition
+
+
+
+
+
+
+
+@import "media"
