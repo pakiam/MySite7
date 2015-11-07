@@ -32,6 +32,7 @@ header
   position: fixed
   top: 20px
   right: 20px
+  z-index: 10
 .to-main-page
   @extend .right-buttons
   top: 30px
@@ -80,10 +81,12 @@ canvas
   padding-top: 15%
 .logo
   img
+    width: 100%
     max-width: 100%
-  a
+  span
     display: inline-block
     vertical-align: middle
+    cursor: pointer
     width: 170px
     height: 170px
     -webkit-animation: pulse 5s infinite linear
@@ -203,6 +206,32 @@ canvas
     margin-right: 20px
 
 
-
+footer
+  padding: 100px
+  ul.footer-socials
+    padding: 0
+    margin: 20px
+    margin-right: 0
+    li
+      display: inline-block
+      margin-left: 2px
+      a
+        width: 36px
+        img
+          width: 36px
+          max-width: 100%
+  p.credits
+    margin-top: 15px
+    text-transform: uppercase
+    letter-spacing: 2px
+    text-align: right
+    font-size: .6rem
+    line-height: 1.3rem
+    font-weight: 200
+  .footer-logo
+    margin-top: 15px
+    float: right
+    img
+      width: 40px
 
 @import "media"

@@ -52,7 +52,6 @@ $(document).ready(function () {
                 $(item).fadeIn('normal').css('margin-top', '50px');
             }, 200 + (index * 500))
         });
-        return false;
     });
 });
 
