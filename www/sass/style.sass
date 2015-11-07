@@ -12,16 +12,54 @@
   -ms-transition: all 1s linear
   -o-transition: all 1s linear
   transition: all 1s linear
+.right-buttons
+  height: 60px
+  width: 60px
+  right: 20px
+  z-index: 10
+  margin-top: 20px
 body
   font-size: 62.5%
   font-family: $font
   background-color: #F4F7F0
   overflow-x: hidden
+header
+  text-align: center
+  h1
+    font-size: 8rem
+    padding-top: 10%
+#navigation
+  position: fixed
+  top: 20px
+  right: 20px
+.to-main-page
+  @extend .right-buttons
+  top: 30px
+  img
+    max-width: 100%
+.to-youridea-page
+  @extend .right-buttons
+  img
+    max-width: 100%
+.to-world-page
+  @extend .right-buttons
+  img
+    max-width: 100%
+.to-innova-page
+  @extend .right-buttons
+  top: 100px
+  img
+    max-width: 100%
 .to-children-site
-  position: absolute
-  top: 10px
-  right: 10px
-  z-index: 10
+  @extend .right-buttons
+  top: 160px
+  img
+    max-width: 100%
+.to-children-site
+  @extend .right-buttons
+  top: 100px
+  img
+    max-width: 100%
 canvas
   display: inline-block
   vertical-align: baseline
@@ -136,8 +174,33 @@ canvas
     vertical-align: middle
   @extend .transition
 
-
-
+.section-title
+  h2
+    color: $base-color
+    text-align: center
+    padding-top: 8%
+    padding-bottom: 4%
+    text-transform: uppercase
+.section-content
+  p
+    padding-top: 1%
+    text-align: center
+.contacts-phone, .contacts-mail, .contacts-adress
+  margin-top: 2%
+  margin-bottom: 2%
+  p
+    display: inline-block
+    text-align: left
+    vertical-align: top
+  .fa
+    padding-right: 4%
+  .fa.fa-mobile
+    padding-left: 4.5%
+.contacts-socials
+  padding-top: 6%
+  padding-bottom: 6%
+  a
+    margin-right: 20px
 
 
 
