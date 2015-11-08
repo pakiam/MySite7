@@ -416,30 +416,67 @@ canvas {
 }
 
 /* line 209, ../sass/style.sass */
+.future-generation-logo img {
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+/* line 213, ../sass/style.sass */
+.future-generation-logo h1 {
+  padding-top: 0;
+}
+
+/* line 215, ../sass/style.sass */
+.navbar {
+  padding-top: 5%;
+}
+/* line 217, ../sass/style.sass */
+.navbar ul.nav {
+  margin: 20px;
+  margin-right: 10%;
+  float: right;
+}
+/* line 221, ../sass/style.sass */
+.navbar ul.nav li {
+  margin-right: 20px;
+  display: inline-block;
+}
+/* line 224, ../sass/style.sass */
+.navbar ul.nav li:last-child {
+  margin-right: 0;
+}
+/* line 226, ../sass/style.sass */
+.navbar ul.nav li a {
+  color: #2d3033;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+/* line 231, ../sass/style.sass */
 footer {
   padding: 100px;
 }
-/* line 211, ../sass/style.sass */
+/* line 233, ../sass/style.sass */
 footer ul.footer-socials {
   padding: 0;
   margin: 20px;
   margin-right: 0;
 }
-/* line 215, ../sass/style.sass */
+/* line 237, ../sass/style.sass */
 footer ul.footer-socials li {
   display: inline-block;
   margin-left: 2px;
 }
-/* line 218, ../sass/style.sass */
+/* line 240, ../sass/style.sass */
 footer ul.footer-socials li a {
   width: 36px;
 }
-/* line 220, ../sass/style.sass */
+/* line 242, ../sass/style.sass */
 footer ul.footer-socials li a img {
   width: 36px;
   max-width: 100%;
 }
-/* line 223, ../sass/style.sass */
+/* line 245, ../sass/style.sass */
 footer p.credits {
   margin-top: 15px;
   text-transform: uppercase;
@@ -449,12 +486,12 @@ footer p.credits {
   line-height: 1.3rem;
   font-weight: 200;
 }
-/* line 231, ../sass/style.sass */
+/* line 253, ../sass/style.sass */
 footer .footer-logo {
   margin-top: 15px;
   float: right;
 }
-/* line 234, ../sass/style.sass */
+/* line 256, ../sass/style.sass */
 footer .footer-logo img {
   width: 40px;
 }
