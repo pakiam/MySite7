@@ -49,9 +49,17 @@ $(document).ready(function () {
     $('.interactive').on('click', function () {
         $('.items').find('.item').each(function (index, item) {
             setTimeout(function () {
-                $(item).fadeIn('normal').css('margin-top', '50px');
+                $(item).css({visibility: 'visible'}).animate({opacity: 1.0});
             }, 200 + (index * 500))
         });
     });
+    //quotes slider
+    $('.bxslider').bxSlider({
+        pager: false,
+        controls: true,
+        auto: true,
+        autoHover: true,
+        nextText: '<i class="fa fa-angle-right"></i>',
+        prevText: '<i class="fa fa-angle-left"></i>'
+    });
 });
-
