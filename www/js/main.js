@@ -62,4 +62,36 @@ $(document).ready(function () {
         nextText: '<i class="fa fa-angle-right"></i>',
         prevText: '<i class="fa fa-angle-left"></i>'
     });
+
+    //hide links
+    $('.structure-left-side-idea>h4').on('click', function () {
+        var self=this;
+        $('.structure-serviceinnova-links > p > a , .structure-project-links > p > a').each(function () {
+                if(!$(this).hasClass('idea-link') && $(this).is(':visible')){
+                    $(this).addClass('hidden-link');
+                }else{
+                    $(this).removeClass('hidden-link');
+                }
+        });
+    });
+    $('.structure-left-side-patent>h4').on('click', function () {
+        var self=this;
+        $('.structure-serviceinnova-links > p > a , .structure-project-links > p > a').each(function () {
+            if(!$(this).hasClass('patent-link') && $(this).is(':visible')){
+                $(this).addClass('hidden-link');
+            }else{
+                $(this).removeClass('hidden-link');
+            }
+        });
+    });
+    $('.structure-left-side-startup>h4').on('click', function () {
+        var self=this;
+        $('.structure-serviceinnova-links > p > a , .structure-project-links > p > a').each(function () {
+            if(!$(this).hasClass('startup-link') && $(this).is(':visible')){
+                $(this).addClass('hidden-link');
+            }else{
+                $(this).removeClass('hidden-link');
+            }
+        });
+    });
 });

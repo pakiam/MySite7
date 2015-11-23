@@ -18,6 +18,9 @@
   right: 20px
   z-index: 10
   margin-top: 20px
+.hidden-link
+  visibility: hidden
+  opacity: 0
 body
   font-size: 62.5%
   font-family: $font
@@ -259,7 +262,7 @@ footer
     img
       width: 40px
 
-// ----- Structure -----
+// ----- sub header and footer -----
 header#sub-header
   padding: 2% 0
   svg
@@ -300,9 +303,48 @@ ul.nav-menu
       &:hover
         border-bottom: 2px solid #808080
 
-
-
-
-
 footer#sub-footer
+
+
+//------ Structure
+section#structure
+  text-align: center
+  p
+    margin: 2% 0
+  a
+    color: $base-color
+    text-decoration: underline
+.structure-table-title-idea
+  h3
+    padding: 7% 0
+  svg
+    margin-top: 10%
+    width: 50px
+    height: 50px
+.structure-table-title-serviceinnova, .structure-table-title-project
+  h3
+    padding: 4% 0
+  svg
+    width: 90px
+    height: 90px
+.structure-serviceinnova-links, .structure-project-links
+  a
+    -webkit-transition: all 1s linear
+    -moz-transition: all 1s linear
+    -ms-transition: all 1s linear
+    -o-transition: all 1s linear
+    transition: all 1s linear
+
+.structure-left-side
+  //border: 1px solid #808080
+  h4
+    padding: 8%
+table.tg
+  border-collapse: separate
+  text-align: center
+  margin: 0 auto
+  td, th
+    width: 33%
+    text-align: center
+    vertical-align: middle
 @import "media"
