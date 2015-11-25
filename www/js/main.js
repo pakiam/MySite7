@@ -64,34 +64,70 @@ $(document).ready(function () {
     });
 
     //hide links
-    $('.structure-left-side-idea>h4').on('click', function () {
-        var self=this;
-        $('.structure-serviceinnova-links > p > a , .structure-project-links > p > a').each(function () {
-                if(!$(this).hasClass('idea-link') && $(this).is(':visible')){
+
+    $('.structure-left-side').on('click', function () {
+        var self = this;
+        if ($(self).hasClass('structure-left-side-idea')) {
+            $(self).find('a').addClass('active-list');
+            $('.structure-serviceinnova-links, .structure-project-links').find('a').each(function () {
+                if (!$(this).hasClass('idea-link')) {
                     $(this).addClass('hidden-link');
-                }else{
-                    $(this).removeClass('hidden-link');
+                    if ('.idea-link:hidden') {
+                        $('.idea-link').removeClass('hidden-link');
+                    }
                 }
+            });
+        } else if ($(self).hasClass('structure-left-side-patent')) {
+            $('.structure-serviceinnova-links, .structure-project-links').find('a').each(function () {
+                if (!$(this).hasClass('patent-link')) {
+                    $(this).addClass('hidden-link');
+                    if ('.patent-link:hidden') {
+                        $('.patent-link').removeClass('hidden-link');
+                    }
+                }
+            });
+        } else {
+            $('.structure-serviceinnova-links, .structure-project-links').find('a').each(function () {
+                if (!$(this).hasClass('startup-link')) {
+                    $(this).addClass('hidden-link');
+                    if ('.startup-link:hidden') {
+                        $('.startup-link').removeClass('hidden-link');
+                    }
+                }
+            });
+        }
+    });
+
+    //portfolio
+    var $portfolio = $('.portfolio');
+    $portfolio.imagesLoaded(function () {
+        $portfolio.mason({
+            itemSelector: '.portfolio-img',
+            ratio: 1,
+            sizes: [
+                [1,1],
+                [1,2],
+                [2,1],
+                [2,2]
+            ],
+            columns: [
+                [0,480,1],
+                [480,780,2],
+                [780,1080,3],
+                [1080,1320,4],
+                [1320,1680,8]
+            ],
+            layout: 'fluid'
         });
     });
-    $('.structure-left-side-patent>h4').on('click', function () {
-        var self=this;
-        $('.structure-serviceinnova-links > p > a , .structure-project-links > p > a').each(function () {
-            if(!$(this).hasClass('patent-link') && $(this).is(':visible')){
-                $(this).addClass('hidden-link');
-            }else{
-                $(this).removeClass('hidden-link');
-            }
-        });
+    $('.portfolio-img').imagefill();
+    //portfolio pop-up
+    $('.portfolio-popup').magnificPopup({
+        type: 'ajax'
     });
-    $('.structure-left-side-startup>h4').on('click', function () {
-        var self=this;
-        $('.structure-serviceinnova-links > p > a , .structure-project-links > p > a').each(function () {
-            if(!$(this).hasClass('startup-link') && $(this).is(':visible')){
-                $(this).addClass('hidden-link');
-            }else{
-                $(this).removeClass('hidden-link');
-            }
-        });
+
+    //vocabulary tabs
+    $('#tab1-container, #tab2-container, #tab3-container').easytabs({
+        updateHash: false
     });
 });

@@ -21,6 +21,8 @@
 .hidden-link
   visibility: hidden
   opacity: 0
+.active-list
+  color: #808080
 body
   font-size: 62.5%
   font-family: $font
@@ -187,13 +189,13 @@ canvas
   h2
     color: $base-color
     text-align: center
-    padding-top: 8%
+    padding-top: 2%
     padding-bottom: 4%
     text-transform: uppercase
 .section-content
   p
     padding-top: 1%
-    text-align: center
+    text-align: left
 .contacts-phone, .contacts-mail, .contacts-adress
   margin-top: 2%
   margin-bottom: 2%
@@ -288,7 +290,7 @@ ul.bx-slider
   .bx-prev
     left: 0
   .bx-next
-    right: 10px
+    right: 25%
 ul.nav-menu
   padding-top: 2%
   padding-bottom: 2%
@@ -314,6 +316,14 @@ section#structure
   a
     color: $base-color
     text-decoration: underline
+    &:link
+      color: $base-color
+    &:visited
+      color: $base-color
+    &:hover
+      color: #505050
+    &:active
+      color: $base-color
 .structure-table-title-idea
   h3
     padding: 7% 0
@@ -336,10 +346,15 @@ section#structure
     transition: all 1s linear
 
 .structure-left-side
-  //border: 1px solid #808080
+  cursor: pointer
+  &:hover
+    background-color: #eeeeee
   h4
-    padding: 8%
+    display: inline-block
+    margin: 8%
+    cursor: pointer
 table.tg
+  width: 100%
   border-collapse: separate
   text-align: center
   margin: 0 auto
@@ -347,4 +362,54 @@ table.tg
     width: 33%
     text-align: center
     vertical-align: middle
+
+//innova
+.portfolio
+  width: 100%
+  position: relative
+  padding: 0
+.portfolio-img, .mason_filler
+  float: left
+  position: relative
+  padding: 0
+
+
+//vocabulary
+#tabs
+  svg
+    width: 10%
+    float: left
+    vertical-align: middle
+    padding-right: 3%
+    padding-left: 3%
+    border: 1px solid #000
+
+.tab-container
+  margin-top: 100px
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+  ul
+    display: block
+    float: left
+    margin: 0
+    padding: 0
+    height: 300px
+    overflow-y: auto
+    width: 15%
+    li
+      margin: 10px 10px
+    a
+      color: $base-color
+      font-size: 1.8rem
+      text-decoration: underline
+.panel-container
+  display: inline-block
+  width: 70%
+  p
+    margin-left: 2%
+
 @import "media"
